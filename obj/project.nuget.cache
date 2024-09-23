@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "lHDk8n14Pw0=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Administrator\\source\\repos\\RPm Gackan1\\RPm Gackan1\\RPm Gackan1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\bootstrap\\5.3.3\\bootstrap.5.3.3.nupkg.sha512"
+  ],
+  "logs": []
+}

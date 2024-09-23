@@ -1,0 +1,30 @@
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\bin\Debug\net8.0\appsettings.json
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\bin\Debug\net8.0\RPm Gackan1.staticwebassets.runtime.json
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\bin\Debug\net8.0\RPm Gackan1.exe
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\bin\Debug\net8.0\RPm Gackan1.deps.json
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\bin\Debug\net8.0\RPm Gackan1.runtimeconfig.json
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\bin\Debug\net8.0\RPm Gackan1.dll
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\bin\Debug\net8.0\RPm Gackan1.pdb
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\obj\Debug\net8.0\RPm Gackan1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\obj\Debug\net8.0\RPm Gackan1.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\obj\Debug\net8.0\RPm Gackan1.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\obj\Debug\net8.0\RPm Gackan1.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\obj\Debug\net8.0\RPm Gackan1.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\obj\Debug\net8.0\RPm Gackan1.RazorAssemblyInfo.cache
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\obj\Debug\net8.0\RPm Gackan1.RazorAssemblyInfo.cs
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\obj\Debug\net8.0\staticwebassets\msbuild.RPm Gackan1.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\obj\Debug\net8.0\staticwebassets\msbuild.build.RPm Gackan1.props
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.RPm Gackan1.props
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.RPm Gackan1.props
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\obj\Debug\net8.0\scopedcss\bundle\RPm Gackan1.styles.css
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\obj\Debug\net8.0\scopedcss\projectbundle\RPm Gackan1.bundle.scp.css
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\obj\Debug\net8.0\RPm Gackan1.dll
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\obj\Debug\net8.0\refint\RPm Gackan1.dll
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\obj\Debug\net8.0\RPm Gackan1.pdb
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\obj\Debug\net8.0\RPm Gackan1.genruntimeconfig.cache
+C:\Users\Administrator\source\repos\RPm Gackan1\RPm Gackan1\obj\Debug\net8.0\ref\RPm Gackan1.dll

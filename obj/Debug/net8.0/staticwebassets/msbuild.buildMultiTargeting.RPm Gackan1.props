@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\RPm Gackan1.props" />
+</Project>
