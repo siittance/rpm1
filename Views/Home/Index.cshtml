@@ -1,20 +1,48 @@
-﻿@{
+﻿
+
+@{
     ViewData["Title"] = "Главная";
 }
 
+
+
 <style>
-    .background-image-div { /* Создаем класс */
-        background-image: url('lib/images/fon.jpg'); /* Путь к изображению */
-        background-repeat: no-repeat; /* Не повторять изображение */
-        background-size: cover; /* Масштабировать изображение, чтобы оно покрывало всю область */
-        background-attachment: fixed; /* Фиксировать изображение */
-        width: 100%; /* Задаем ширину div на 100% */
-        height: auto; /* Высота div будет автоматически подстраиваться */
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+    }
+
+    .background-image-div {
+        background-image: url('lib/images/home.jpg'); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        height: 100vh; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .display-4 {
+        font-size: 3rem; 
+        color: black; 
+    }
+
+    .slogan {
+        font-size: 1.5rem; 
+        color: black;
+        margin-top: 10px;
     }
 </style>
 
 <div class="background-image-div">
     <div class="text-center">
-        <h1 class="display-4" style="color: lightgoldenrodyellow">Welcome</h1>
+        <h1 class="display-4">Welcome to Florence</h1>
+        <p class="slogan">Цветы для вас! На любой случай в жизни</p>
     </div>
 </div>

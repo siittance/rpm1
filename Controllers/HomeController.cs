@@ -1,4 +1,5 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using RPm_Gackan1.Models;
 using System.Diagnostics;
 
@@ -6,19 +7,14 @@ namespace RPm_Gackan1.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        public FlorenceeContext db;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(FlorenceeContext context)
         {
-            _logger = logger;
+            db = context;
         }
 
         public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult Catalog()
         {
             return View();
         }
@@ -27,16 +23,12 @@ namespace RPm_Gackan1.Controllers
         {
             return View();
         }
-        public IActionResult Basket()
-        {
-            return View();
-        }
+
         public IActionResult Percent()
         {
             return View();
         }
-
-
+        
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

@@ -1,0 +1,25 @@
+﻿@model RPm_Gackan1.Models.Review
+
+@if (User.Identity.IsAuthenticated)
+{
+    <form asp-action="AddReview" method="post">
+        <input type="hidden" name="CatalogeId" value="@Model.CatalogeId" />
+
+        <label>Оценка:</label>
+        <select name="Rating" class="form-control" required>
+            @for (int i = 1; i <= 5; i++)
+            {
+                <option value="@i">@i ⭐</option>
+            }
+        </select>
+
+        <label>Отзыв:</label>
+        <textarea name="ReviewText" class="form-control" required></textarea>
+
+        <button type="submit" class="btn btn-primary mt-2">Отправить</button>
+    </form>
+}
+else
+{
+    <p>Только авторизованные пользователи могут оставлять отзывы.</p>
+}

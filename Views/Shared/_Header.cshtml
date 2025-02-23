@@ -1,0 +1,53 @@
+﻿<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3 rounded-nav">
+        <div class="container-fluid">
+            <img class="navbar-brand" src="~/lib/images/FlorenceIcon.png" alt="Florence Icon" style="height: 80px; width:130px;" />
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Cataloge" asp-action="Catalog">Ассортимент</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Cataloge" asp-action="Cart">Корзина</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Percent">Скидки</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Account">Учетная запись</a>
+                    </li>
+                    @if (User.IsInRole("Админ"))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="CRUD" asp-action="CRUD">CRUD</a>
+                        </li>
+                    }
+                </ul>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <form method="post" asp-controller="Profile" asp-action="Logout" class="d-inline">
+                                <button type="submit" class="nav-link login-link">Выйти</button>
+                            </form>
+                        </li>
+                    </ul>
+                }
+                else
+                {
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link login-link" asp-area="" asp-controller="Profile" asp-action="Authorization">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link signup-link" asp-area="" asp-controller="Profile" asp-action="Registration">Sign-up</a>
+                        </li>
+                    </ul>
+                }
+            </div>
+        </div>
+    </nav>
+</header>

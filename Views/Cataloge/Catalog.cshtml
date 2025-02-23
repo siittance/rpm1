@@ -1,0 +1,132 @@
+﻿@model IEnumerable<RPm_Gackan1.Models.Cataloge>
+
+<p>Страничка для каталога</p>
+
+<div class="container-fluid">
+    <div class="row">
+        <h3 class="text">Ассортимент</h3>
+        <div class="col-md-3">
+            <input type="text" id="searchInput" placeholder="Поиск по товарам" class="form-control mb-3" onkeyup="filterProducts()" />
+            <select id="sortSelect" class="form-select mb-3" onchange="sortProducts()">
+                <option value="nameAsc">Название (А-Я)</option>
+                <option value="nameDesc">Название (Я-А)</option>
+                <option value="priceAsc">Цена (по возрастанию)</option>
+                <option value="priceDesc">Цена (по убыванию)</option>
+            </select>
+            <div class="brand-filter">
+                @foreach (var i in Model)
+                {
+                    if (i.ProductName != null && !string.IsNullOrEmpty(i.ProductName))
+                    {
+                        <div class="form-check">
+                            <input class="form-check-input brand-checkbox" type="checkbox" value="@i.ProductName" onchange="filterProducts()" />
+                            <label class="form-check-label">@i.ProductName</label>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="row" id="productList">
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-3 product-card" data-name="@item.ProductName" data-brand="@item.ProductName" data-price="@item.ProductPrice">
+                        <a asp-controller="Cataloge" asp-action="Details" asp-route-id="@item.IdCataloge" style="text-decoration: none; color: inherit;">
+                            <img src="~/lib/images/@item.Images" alt="@item.ProductName" style="width: 200px;">
+                            <h2>@item.ProductName</h2>
+                            <p>@item.ProductPrice ₽</p>
+                            @await Component.InvokeAsync("AverageRating", new { catalogeId = item.IdCataloge })
+                        </a>
+                        <form asp-action="AddToCart" method="post">
+                            <input type="hidden" name="catalogId" value="@item.IdCataloge" />
+                            <input type="number" name="quantity" value="1" min="1" max="@item.Quantity" />
+                            <button type="submit">Добавить в корзинку</button>
+                        </form>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function filterProducts() {
+        const searchInput = document.getElementById('searchInput').value.toLowerCase();
+        const selectedBrands = Array.from(document.querySelectorAll('.brand-checkbox:checked')).map(cb => cb.value);
+        const products = document.querySelectorAll('.product-card');
+
+        products.forEach(product => {
+            const name = product.dataset.name.toLowerCase();
+            const brand = product.dataset.brand;
+
+            const matchesSearch = name.includes(searchInput);
+            const matchesBrand = selectedBrands.length === 0 || selectedBrands.includes(brand);
+
+            product.style.display = (matchesSearch && matchesBrand) ? '' : 'none';
+        });
+    }
+
+    function sortProducts() {
+        const sortValue = document.getElementById('sortSelect').value;
+        const products = Array.from(document.querySelectorAll('.product-card'));
+
+        products.sort((a, b) => {
+            const nameA = a.dataset.name.toLowerCase();
+            const nameB = b.dataset.name.toLowerCase();
+            const priceA = parseFloat(a.dataset.price);
+            const priceB = parseFloat(b.dataset.price);
+
+            switch (sortValue) {
+                case 'nameAsc':
+                    return nameA.localeCompare(nameB);
+                case 'nameDesc':
+                    return nameB.localeCompare(nameA);
+                case 'priceAsc':
+                    return priceA - priceB;
+                case 'priceDesc':
+                    return priceB - priceA;
+                default:
+                    return 0;
+            }
+        });
+
+        const productList = document.getElementById('productList');
+        productList.innerHTML = '';
+        products.forEach(product => productList.appendChild(product));
+    }
+</script>
+
+<style>
+    .product-card img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .btn-cart {
+        background-color: #FFB832;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        .btn-cart:hover {
+            background-color: #FF9800;
+        }
+
+    .product-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+        .product-card p {
+            margin-bottom: 5px; 
+        }
+</style>

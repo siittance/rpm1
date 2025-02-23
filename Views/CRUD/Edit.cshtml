@@ -1,0 +1,40 @@
+﻿@model RPm_Gackan1.Models.Cataloge
+
+@{
+	ViewBag.Title = "Изменение";
+}
+<h1>Изменение</h1>
+<h2>Продукт</h2>
+<hr />
+<form asp-action="Edit">
+	<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+	<input type="hidden" asp-for="IdCataloge"	/>
+	<div class="form-group">
+		<label asp-for="Images" class="control-label"></label>
+		<input type="text" asp-for="Images" class="form-label"/>
+	</div>
+	<div class="form-group">
+		<label asp-for="ProductName" class="control-label"></label>
+		<input type="text" asp-for="ProductName" class="form-label" />
+	</div>
+	<div class="form-group">
+		<label asp-for="ProductDescription" class="control-label"></label>
+		<input type="text" asp-for="ProductDescription" class="form-label"/>
+	</div>
+	<div class="form-group">
+		<label asp-for="ProductPrice" class="control-label"></label>
+		<input type="number" asp-for="ProductPrice" class="form-label"/>
+	</div>
+		<label asp-for="ProductCategoriesId" class="control-label"></label>
+		<input type="text" asp-for="ProductCategoriesId" class="form-label"/>
+	<div class="form-group">
+		<label asp-for="MagazinesId" class="control-label"></label>
+		<input type="text" asp-for="MagazinesId" class="form-label"/>
+	</div>
+	<div class="form-group">
+		<input type="submit" value="Сохранить" class="btn btn-primary"/>
+	</div>
+</form>
+<div>
+	<a asp-action="CRUD">Вернуться</a>
+</div>

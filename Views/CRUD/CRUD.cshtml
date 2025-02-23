@@ -1,0 +1,27 @@
+﻿@model IEnumerable<RPm_Gackan1.Models.Cataloge>
+
+@{
+    ViewBag.Title = "Все товары";
+}
+
+<a asp-action="Create" >Добавить продукт</a>
+<table class="table">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ProductName</td>
+            <td>
+                <a asp-action="Details" asp-controller="CRUD" asp-route-id="@item.IdCataloge">Подробнее</a>
+                <a asp-action="Edit" asp-controller="CRUD" asp-route-id="@item.IdCataloge">Изменить</a>
+                <a asp-action="Delete" asp-controller="CRUD" asp-route-id="@item.IdCataloge">Удалить</a>
+            </td>
+        </tr>
+    }
+</table>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+

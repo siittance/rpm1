@@ -1,0 +1,25 @@
+﻿@model RPm_Gackan1.Models.Cataloge
+@{
+	ViewBag.Title = Model.ProductName;
+}
+
+<h2>Продукт: @Model.ProductName</h2>
+<div>
+	<dl class="dl-horizontal">
+		<dt>Идентификатор</dt>
+		<dd>@Model.IdCataloge</dd>
+		<dt>Изображение</dt>
+		<dd>@Model.Images</dd>
+		<dt>Описание</dt>
+		<dd>@Model.ProductDescription</dd>
+		<dt>Цена</dt>
+		<dd>@Model.ProductPrice</dd>
+		<dt>Категория id</dt>
+		<dd>@Model.ProductCategoriesId</dd>
+		<dt>Магазин id</dt>
+		<dd>@Model.MagazinesId</dd>
+	</dl>
+	<div>
+		<a asp-action="CRUD">Вернуться</a>
+	</div>
+</div>
